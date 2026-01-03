@@ -22,7 +22,7 @@ Apply Patch using the xdelta command line:
 
 xdelta.exe -d -s (old_file) (delta_file) (decoded_new_file)
 
-old_file should be a copy of Legend of Zelda Phantom Hourglass US/EU
+old_file should be a copy of Legend of Zelda Phantom Hourglass US/EU/JP
 delta_file is the patch (zelda_phantom_hourglass_dpad.xdelta)
 decoded_new_file is the filename after patching
 
