@@ -1,6 +1,6 @@
 attack_roll_check_keys:
 	stmfd r13!, r1-r7, r14
-	rbl 0x020B1270, 0x020B12D0
+	rbl 0x020B1270, 0x020B12D0, 0x020B0C30
 	bl util_get_keys_down
 	tst r6, GBAKEY_A
 	beq @@endroutine

@@ -7,17 +7,17 @@
 ;RAM ranges: 0x02004000-0x02060F77,  0x02004000-0x02060FD7
 .ropen "arm9/arm9.bin", "arm9/arm9.bin", \
        "temp/arm9.bin", "temp/arm9.bin", \
-        0x02004000, 0x02004000
+        0x02004000, 0x02004000, 0x02004000
 	;advance dialog with A/B in addition to tap
-	.rorg 0x0203A474, 0x0203A4B8
+	.rorg 0x0203A474, 0x0203A4B8, 0x0203A224
 	bl dialog_advance_check_keys
 
 	;stops game from clearing the pressed buttons during boss battles
-	.rorg 0x0202ADEC, 0x0202AE04
-	rb 0x0202ADF8,  0x0202AE10
+	.rorg 0x0202ADEC, 0x0202AE04, 0x0202ADBC
+	rb 0x0202ADF8,  0x0202AE10, 0x0202ADC8
 
 	;ARM9 "freespace"
-	.rorg 0x02058608, 0x02058664
+	.rorg 0x02058608, 0x02058664, 0x02058318
 		.area 0x4B4
 			.include "util.asm"
 			.include "movement/movement_arm9_freespace.asm"
@@ -33,7 +33,7 @@
 ;RAM range 0x02077360-0x020E92C0,  0x020773C0-0x020E9320
 .ropen "arm9/overlay_0000.bin", "arm9/overlay_0000.bin", \
        "temp/overlay_0000.bin", "temp/overlay_0000.bin", \
-       0x02077360, 0x020773C0
+       0x02077360, 0x020773C0, 0x02077060
 	.include "interact/interact_overlay0000.asm"
 	.include "attack/attack_overlay0000.asm"
 	.include "movement/movement_overlay0000.asm"
