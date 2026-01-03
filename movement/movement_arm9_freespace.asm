@@ -1,6 +1,6 @@
 movement_check_keys:
 	stmfd r13!, r0-r7, r14
-	rbl 0x020B7888, 0x020B78E8;overwritten opcode
+	rbl 0x020B7888, 0x020B78E8, 0x020B7208;overwritten opcode
 	bl util_get_keys_held
 	tst r6, GBAKEY_SELECT
 	;If select is pressed no movement
@@ -22,9 +22,9 @@ movement_check_keys:
 	str r0, [r4, 0x58]
 
 	;get map angle
-	rldr r0, 0x027E0F64, 0x027E0F64
+	rldr r0, 0x027E0F64, 0x027E0F64, 0x027E0F64
 	ldr r0, [r0, 0x00]
-	rbl 0x0208B120, 0x0208B180
+	rbl 0x0208B120, 0x0208B180, 0x0208ADF0
 	add r0 ,r0, 0x200
 	ldrsh r5, [r0, 0x26]
 
