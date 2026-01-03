@@ -43,8 +43,8 @@
 ;EU uses overlay20 for this but it was extracted as "overlay_0021_original.bin" to work around an armips bug (this is fixed in later releases)
 ;uncompressed size: 0xC900
 ;RAM range 0x02112BA0-0x0211F4A0
-.ropen "arm9/overlay_0021.bin", "arm9/overlay_0020.bin", "arm9/overlay_0021.bin", \
-       "temp/overlay_0021.bin", "temp/overlay_0020.bin", "temp/overlay_0021.bin", \
+.ropen "arm9/overlay_0021.bin", "arm9/overlay_0020.bin", "arm9/overlay_0020.bin", \
+       "temp/overlay_0021.bin", "temp/overlay_0020.bin", "temp/overlay_0020.bin", \
        0x02112BA0, 0x02112C20, 0x021121A0
 	.include "movement/movement_overlay0021.asm"
 .close

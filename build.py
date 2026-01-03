@@ -242,6 +242,8 @@ if __name__ == "__main__":
 		overlay_list.append(21)
 	elif region == 1:
 		overlay_list.append(20)
+	elif region == 2:
+		overlay_list.append(20)
 	os.makedirs("arm9", exist_ok = True)
 	os.makedirs("temp", exist_ok = True)
 	main()
