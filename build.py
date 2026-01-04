@@ -237,7 +237,7 @@ if __name__ == "__main__":
 		build_error("input.nds not found in the unpack directory")
 	region = check_region()
 	if region == -1:
-		build_error("Invalid game ID, this input.nds is not The Legend of Zelda: Phantom Hourglass US or EU")
+		build_error("Invalid game ID, this input.nds is not The Legend of Zelda: Phantom Hourglass US, EU, or JP")
 	if region == 0:
 		overlay_list.append(21)
 	elif region == 1:
