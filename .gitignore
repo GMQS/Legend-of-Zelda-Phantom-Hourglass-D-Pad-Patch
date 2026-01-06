@@ -21,3 +21,7 @@ unpack/y9.bin
 #ignore temp files
 arm9/
 temp/
+armips.exe
+blz.exe
+filelist.txt
+ndstool.exe
